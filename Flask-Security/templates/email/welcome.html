@@ -1,0 +1,12 @@
+
+<div>
+    <P>hELLOOOO</P>
+    <hr>
+    <p>{{ _('Welcome %(email)s!', email=user.email) }}</p>
+</div>
+{% if security.confirmable %}
+
+<p>{{ _('You can confirm your email through the link below:') }}</p>
+</div>
+<p><a href="{{ confirmation_link }}">{{ _('Confirm my account') }}</a></p>
+{% endif %}
